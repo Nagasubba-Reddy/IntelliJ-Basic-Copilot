@@ -1,0 +1,40 @@
+@startuml
+'write a plantuml code for creating shapeable interface with method draw'
+interface Shapeable {
+    +draw(): void
+}
+
+note left of Shapeable
+    Shapeable interface with draw method
+end note
+
+'create an abstract class Shape with field name by implementing Shapeable interface'
+abstract class Shape implements Shapeable {
+    -name: String
+    +Shape(name: String)
+}
+
+'write a class circle extending Shape class with field radius'
+class Circle extends Shape {
+    -radius: double
+    +Circle(name: String, radius: double)
+    +draw(): void
+}
+
+'note left o
+'write a class rectangle extending Shape class with field width and height'
+class Rectangle extends Shape {
+    -width: double
+    -height: double
+    +Rectangle(name: String, width: double, height: double)
+    +draw(): void
+}
+
+'write a class square extending Shape class with field side'
+class Square extends Shape {
+    -side: double
+    +Square(name: String, side: double)
+    +draw(): void
+}
+
+@enduml
